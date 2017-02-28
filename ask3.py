@@ -1,6 +1,6 @@
-print("Πληκτρολογηστε αριθμους χωρισμενους με κενα")
+print("Dwste ari8mous xwrismenous me kena")
 lista=[int(x) for x in input().split()]
-print("Αρχική Λίστα",lista)
+print("Arxikh Lista",lista)
 i = 0
 for num in lista:
     if num == 0:
@@ -10,9 +10,9 @@ for num in lista:
 
 lista = list(filter(lambda a: a != 0, lista))
 
-print("Λίστα χωρίς μηδενικά:", lista)
+print("Lista xwris mhdenika:", lista)
 
 for num in range(0,i):
     lista.append(0)
 
-print("Νέα λίστα:", lista)
+print("Nea lista:", lista)

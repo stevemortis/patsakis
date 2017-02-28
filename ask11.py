@@ -6,7 +6,7 @@ req = urllib.request.urlopen(url)
 html = json.load(req)
 for item in html:
 	name1=(item['name'])
-print("*Η ΜΠΥΡΑ ΑΠΟΣΤΕΛΕΤΑΙ ΣΤΟ e-MAIL ΣΑΣ!*")	
+print("*H MPYRA APOSTELETAI STO e-MAIL SAS!*")	
 def send_simple_message():
     return requests.post(
     	#Χρησιμοποιω το δικο μου mailgun account με τον οποιο στελνω το mail στο unipi@mailinator.com
@@ -18,4 +18,5 @@ def send_simple_message():
               "text": name1})
 
 send_simple_message()
-print("*Η ΜΠΥΡΑ ΣΑΣ ΠΕΡΙΜΕΝΕΙ! ΠΑΡΑΚΑΛΩ ΕΛΕΓΞΤΕ ΤΑ e-MAIL ΣΑΣ*")
+print("*H MPYRA SAS PERIMENEI! PARAKALW ELEGKSTE TA e-MAIL SAS*")
+

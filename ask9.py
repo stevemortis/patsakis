@@ -1,3 +1,7 @@
+'''ΔΕΝ ΕΧΟΥΜΕ ΠΡΟΣΒΑΣΗ ΣΤΟ URL ΜΕ ΤΙΣ ΜΠΥΡΕΣ!ΔΗΛΑΔΗ ..../beer ΜΠΟΡΕΙ ΝΑ ΧΡΗΣΙΜΟΠΟΙΗΘΕΙ ΜΟΝΟ ΑΠΟ PREMIUM USERS.
+ΓΙΑ ΤΟ ΛΟΓΟ ΑΥΤΟ ΧΡΗΣΙΜΟΠΟΙΗΣΑ ΤΙΣ ΠΕΡΙΓΡΑΦΕΣ ΤΩΝ STYLES ΓΙΑ ΑΝΑΖΗΤΗΣΗ.ΕΥΧΑΡΙΣΤΩ! :) '''
+
+
 import json
 import urllib.request
 max=-100
@@ -13,9 +17,6 @@ for i in range(len(kleidia)):
         if 'description' in k:
          if kleidia[i] in k['description']:
             sum+=k['description'].count(kleidia[i])
-         if 'description' in k['name']:
-            if kleidia[i] in k['name']['description']:
-             sum+=k['name']['description'].count(kleidia[i])
         if sum>max:
           max=sum
           name=k['name']

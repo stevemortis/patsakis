@@ -14,7 +14,7 @@ def TweetFetch():
     while success==0:
         try:
                         data=""
-                        print("Δώστε ένα username χρήστη")
+                        print("Dwste ena username xrhsth")
                         userid = input()
                         for status in tweepy.Cursor(api.user_timeline, id=userid, include_rts=False).items(10):
                             data = data + status.text + "\n"
@@ -22,7 +22,7 @@ def TweetFetch():
                         names.append(userid)
                         return data;
         except tweepy.error.TweepError:
-                        print("Το username δεν υπάρχει. Ξαναπροσπαθήστε!")
+                        print("To username den uparxei. Ksanaprospa8iste!")
 users=[]
 for user in range(0,2):
 	users.append(TweetFetch());
@@ -35,10 +35,10 @@ for i in range(0,2):
 
 words = [len(counter[0]),len(counter[1])]
 if words[0] > words[1]:
-	print("Ο χρήστης " + names[0] + " έχει τις περισσότερες λέξεις. Ο χρήστης " + names[0] + " εχει" + str(words[0]) + " ενώ ο χρήστης " + names[1] +" έχει "+ str(words[1]))
+	print("O xrhsths " + names[0] + " exei tis perissoteres lekseis. O xrhsths " + names[0] + " exei" + str(words[0]) + " enw o xrhsths " + names[1] +" exei "+ str(words[1]))
 else:
 	if words[1] > words[0]:
-		print("Ο χρήστης " + names[1] + " έχει τις περισσότερες λέξεις. Ο χρήστης " + names[1] + " εχει" + str(words[1]) + " ενώ ο χρήστης " + names[0] +" έχει "+ str(words[0]))
+		print("O xrhsths " + names[1] + " exei tis perissoteres lekseis. O xrhsths " + names[1] + " exei" + str(words[1]) + " enw o xrhsths " + names[0] +" exei "+ str(words[0]))
 	else:
-		print("Και οι δύο χρήστες έχουν τον ίδιο αριθμό λέξεων. Συγκεκριμένα " + str(words[0]) + " λέξεις")
+		print("Kai oi duo xrhstes exoun ton idio ari8mo leksewn. Sygkekrimena " + str(words[0]) + " lekseis")
 		
